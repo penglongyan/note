@@ -1,0 +1,77 @@
+ Git的三个工作区域
+	
+　	◆ 工作区（Working Directory）
+
+　	◆ 暂存区（Stage）
+
+　	◆ 版本库（Repository）
+
+
+----------------------------------------------------------------
+
+1.Git安装（略）
+
+	[$ git config --global user.name "Your Name"]----添加管理账户
+
+	[$ git config --global user.email "email@example.com"]-----添加邮件账户
+
+
+2.在Git创建库→notebook
+
+
+3.找一个的盘→创建一个空目录→并打开Git窗口
+
+	[git clone https://github.com/MX919/notebook]  //库的地址（需要到github官网创建账号密码并建立一个空项目->然后获取地址）
+
+	[$ cd notebook]  //空目录出现notebook文件夹（notebook-->创建的项目名）
+
+	[$ git init]     //初始化
+
+	[$ pwd]          //显示当前的路径
+
+
+5.在notebook文件夹编辑git.txt（需要推送/保存的）文件
+
+	[$ git add git.txt]    //将文件添加到暂存区（此时文件只是《暂时性的保存》）
+	
+	[$ git status]		//查看文件状态（红色---没add|||绿色---已经add）
+
+	[$ git commit -m "描述信息"]  //将文件提交到本地仓库
+
+
+6.上传
+
+	[$ git push] //OK  了  吗？  然-而-并-没-有
+	
+	验证GitHub官网的账号和密码（第一次需要验证，以后不需要）
+
+
+7.修改
+
+	[$ git add git1.0.txt] //将修改的文件添加到暂存区
+
+	---以下三部每次 增、删、改 都必须执行---
+
+	[$ git commit -m "git notes"] //提交到本地仓库
+	
+	[$ git push]	 //推送到服务器 
+	
+	[$ git pull]	 //更新
+	
+
+	
+------------------------------------------------------
+
+  命令  
+ 
+	[$ git add .]         //添加所有修改(新)的
+
+	[$ git clone xxxx]    //拉取远程的Repo到本地
+	
+	[$ git rm 我的文件]   //删除文件
+
+	[$ git rm -r 文件夹/] //删除文件夹
+	
+	[$ git log]           //查看日志
+
+	[$ git status]	      //查看文件状态
