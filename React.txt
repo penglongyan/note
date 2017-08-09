@@ -1,0 +1,85 @@
+-------------------------- React-----------------------
+
+一.安装
+
+	-->$ git clone git@github.com:ruanyf/react-demos.git
+
+二.HTML模板
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="react.js></script>	-------------->recat的核心库
+<script src="react-dom.js></script> -------------->与DOM相关的功能
+<script src="browser.min.js></script> -------------->转换JSX语法为JavaScript语法
+						   （耗时间上线应放到服务器完成）
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel"> -------------->react独有的JSX语法与JavaScript不兼容
+</script>
+<body>
+</html>
+
+
+****JSX语法转换JavaScript语法
+	-->$ babel src --out-dir build
+
+
+三.ReactDOM.Render()
+      reactDOM.Render(template,targetDOM)
+	-------->template： react的模板
+	-------->targetDOM: 该模板的插入目标位置
+	-------->使用className 为创建的元素添加类名
+	-------->为创建元素添加行内样式
+		<h1 style={{"background-color":"red","color":"blue"}}>Hello</h1>
+	-------->使用样式变量名修改创建元素的样式
+<div id="expmple"></div>
+<script type="text/bable">
+let hstyle = { "background-color":"red","color":"white"};
+ReactDOM.render(
+	<h1 style={hstyle}>Hello</h1>,
+	document.getElementById('expmple')
+);
+
+
+四.JSX语法
+	1.特点：HTML语言可以直接写在JavaScript语法中
+		1）.JS语法：obj.innerhtml="<div><span></span></div>
+		2).JSX语法：
+
+<script type="text/babel"> -------------->javascript语言标签
+ReactDOM.render(
+<h1>Hello React</h1>, -------------->HTML标签
+document.getElementById('example')
+);
+
+	2.语法规则：遇到HTML标签就用HTML规则解析，遇到代码块就用JavaScript规则解析
+	3.JSX编译优点：
+		1）.执行速度块，编译JavaScript代码后进行优化
+		2）.在编译的过程就能发现错误
+		3）.编写 模板更加简单快速
+	4.数组变量:
+
+<script type="text/babel">
+var names = ["React","vue","vue-cli"];
+ReactDOM.render(
+
+
+1)--------><div>{names}</div>,targetDOM)-------->得到的是：Reactvuevue-cli
+
+2)-------->
+<div>{
+names.map(funcion(name,index){return <div key={index}>{names}</div>,targetDOM})
+-------->得到的是 React<br/>vue<br/>vue-cli
+
+
+3)var names = [<h1>React</h1>,<h2>vue</h2>,<h3>vue-cli</h3>];
+ReactDOM.render(
+<div>names</div>,targetDOM
+) 
+-------->得到的是：React<br/>vue<br/>vue-cli
+
+</script>
+	
+	
