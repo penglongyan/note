@@ -1,0 +1,22 @@
+Es6
+一．用 let 和const 代替了 var
+	Let 声名的变量只在 let 所在的代码块内有效，而var 出来的会造成变量提升
+	例如：	1.直接 console.log(a) 会得到 a is not defined  ------> a 不存在
+ 		2. console.log(a); var a=10; 会得到 undefined  -------> a  存在 但未赋值
+***什么是预解释
+浏览器引擎会提前扫描带 var 和 function 的关键字声明的变量和定义的函数，这个过程叫预解释
+****  var 和 function的区别
+	---------> Var是 只声明不定义
+	---------> Function 是声明+定义同时进行
+	For( var i=0;i<5;i++ ){}  会得到   最后i 是5；
+	For( let i=0;i<5;i++ ){}   会得到   i is not defined;	优点： i的值 不会泄露。
+Var 和 let 的区别
+	Var声明的变量会出现变量提升，可以在声明之前使用，
+		而 let 就没有这种现象只能在声明后使用，否则会报错。
+
+******function 传参进来的参数 属于function的私有变量··let 不能重复声明·会报错
+
+	Let 是JavaScript 新增的块级作用域
+
+
+Const ：声明+定义常量，一旦定义，常量的值不能改变。必须声明和定义同时完成。
