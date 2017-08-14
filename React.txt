@@ -82,4 +82,15 @@ ReactDOM.render(
 
 </script>
 	
-	
+
+五.组件：React 可以封装一个组件，然后将这个组件插入到指定的节点里
+	--》需要使用React.createClass({})创建组件
+
+<script type="text/babel">
+var Zhujian = React.reacteClass({
+render: function(){
+return <h3>Hello world</h3>	
+}
+
+ReactDOM.render
+})
