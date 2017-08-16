@@ -1,0 +1,62 @@
+************** 使用vue-cli搭建项目 **********************
+*安装node.js
+
+*下载地址：http://nodejs.cn/下载安装包（固定版本）
+
+* node -v 和 npm -v 显示安装版本，就说明安装成功
+
+*全局安装vue-cli 	-------------》 $ npm install -g vue-cli
+
+*推荐使用国内镜像来安装
+
+*安装cnpm 		-------------》 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+*如果安装失败 		-------------》 $ npm cache clean 清除缓存，再重新安装
+
+*cnpm -v 显示安装版本，就说明安装成功了
+
+*使用 cnpm 安装 vue-cli 和 webpack 	-------------》 $ cnpm install -g vue-cli (带有webpack插件)
+
+*vue -V（大写） 显示版本，就说明安装成功了
+
+*如果提示“无法识别‘vue’”，有可能是 npm 版本过低，-------------》 $ npm install npm (更新npm版本)
+
+*创建项目并初始化 -------------》 $ vue init webpack 项目名 （会在当前目录生成一个该名称的项目文件夹）
+
+-->Project name 	（项目名称，可更改）
+-->Project description 	（项目描述）
+-->Auothor 		（作者）
+-->Vue build 		（打包方式）
+-->Use ESLint to lint your code?	（使用ESLint规范代码，选择 yes）
+-->Pick an ESLint preset		（使用ESLint规范代码）
+-->Setup unit tests with Karma + Mocha?	（单元测试，选择 no）
+-->Setup e2e tests with Nightwatch?	（单元测试，选择 no）
+
+*进入项目文件 	-------------》$ cd 项目名
+
+*安装项目依赖 	-------------》$ cnpm install
+
+*启动项目 	-------------》$ npm run dev
+
+*如果浏览器打开之后，没有加载出页面，可能是本地端口被占用，修改配置文件 config>index.js
+
+*assetsPublicPath: './'， （打包后的路径）
+
+*port：8075， （修改端口号）
+
+*建议将端口号改为不常用的端口，将build 的路径修改为"./"
+
+*因为打包之后，外部引入js 和 css 文件时，如果路径以 "/"开头，在本地是无法找到对应文件的（服务器没问题）
+，所以如果需要在本地打开打包后的文件，就得修改文件路径
+
+*打包上线 -------------》$ npm run build （自己的项目文件都要放到src文件夹下）	
+
+
+
+*******************组件之间的数据传递
+
+************************手动搭建 vue 环境**************************
+指令-》组件-》交互-》路由-》配置（手动配置/vue-cli）
+
+*项目构建配置需求
+**使用webpack
