@@ -156,7 +156,8 @@ node.js异步编程直接体现就是回调，node所有的api都支持回调函数
 
 
 
-
+**********************************************方法
+**fs.readFile('文件路径' ， '编码格式-》可选' ， callback==>function(err , data){})   --------->调用数据 read(function(data){})
 
 
 
