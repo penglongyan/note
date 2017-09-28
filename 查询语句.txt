@@ -1,0 +1,32 @@
+select  * from  表名
+
+insert into 表名（列名）values('值')
+
+insert into 表名（列名）select  值  union
+
+
+delete from  表名 where 条件
+
+truncate  table   表名      （清空所有信息）
+
+
+update  表名  set 列名=更新值  where 更新 条件
+
+ 
+
+insert into  B表名（B列名）select A 列名 from A表名
+
+select A 列表名  into B表名（未知） from A表
+
+
+select * fom a表名A inner join b表名B   on A列名=B列名 where 条件 （双表连接查询）
+
+select * from  a表名A,b表名B  where  A列名=B列名 and 条件
+
+select  a.no as 学生ID,a.name as 学生名字,c.subname as 科目名称, b.score as 学生成绩
+from A a left join B b on a.no = b.no left join C on b.subid = c.subid（实例三表左连接查询）
+
+
+
+
+
